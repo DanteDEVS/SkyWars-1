@@ -1,9 +1,14 @@
-name: SkyWarsForPE
+name: SkyWarsUltimate
 main: larryTheCoder\SkyWarsPE
-version: "3.1.35-delta1"
-api: 3.16.0
-author: larryTheCoder
-website: https://github.com/larryTheCoder/SkyWarsForPE
+version: "1.0"
+api: 4.0.0
+authors: 
+- HenryDevMaster
+- Ihsan48
+- IarryTheCoder
+website: 
+- https://github.com/Henry12960
+- https://github.com/Ihsan48
 softdepend:
   - EconomyAPI
   - EasyKits
