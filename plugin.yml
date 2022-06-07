@@ -1,5 +1,5 @@
 name: SkyWarsUltimate
-main: larryTheCoder\SkyWarsPE
+main: SkyWars\Main
 version: "1.0"
 api: 4.0.0
 authors: 
