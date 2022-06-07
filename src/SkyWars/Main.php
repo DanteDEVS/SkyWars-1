@@ -24,7 +24,7 @@ use pocketmine\plugin\{PluginBase};
 use pocketmine\Server;
 use pocketmine\utils\{Config, MainLogger, TextFormat};
 
-class SkyWarsPE extends PluginBase {
+class SkyWars extends PluginBase {
 
 	private const CONFIG_VERSION = 5;
 	private const LOCALE_VERSION = 11;
@@ -49,13 +49,13 @@ class SkyWarsPE extends PluginBase {
 	/** @var KitManager|null */
 	private $kitManager = null;
 
-	public function onLoad(): void{
+	public function onEnable() : void {
 		self::$instance = $this;
 
 		$this->initConfig();
 	}
 
-	public function initConfig(): void{
+	public function initConfig() : void {
 		Utils::ensureDirectory();
 		Utils::ensureDirectory("image/");
 		Utils::ensureDirectory("language/");
@@ -119,7 +119,7 @@ class SkyWarsPE extends PluginBase {
 		}
 	}
 
-	public function onEnable(): void{
+	public function onLoad() : void {
 		new LevelAsyncPool($this, 4);
 
 		$server = $this->getServer();
@@ -230,7 +230,7 @@ class SkyWarsPE extends PluginBase {
 		return $this->economy;
 	}
 
-	public function onDisable(): void{
+	public function onDisable() : void {
 		try{
 			if($this->crashed) return;
 
