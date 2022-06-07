@@ -1,38 +1,11 @@
 <?php
-/**
- * Adapted from the Wizardry License
- *
- * Copyright (c) 2015-2018 larryTheCoder and contributors
- *
- * Permission is hereby granted to any persons and/or organizations
- * using this software to copy, modify, merge, publish, and distribute it.
- * Said persons and/or organizations are not allowed to use the software or
- * any derivatives of the work for commercial use or any other means to generate
- * income, nor are they allowed to claim this software as their own.
- *
- * The persons and/or organizations are also disallowed from sub-licensing
- * and/or trademarking this software without explicit permission from larryTheCoder.
- *
- * Any persons and/or organizations using this software must disclose their
- * source code and have it publicly available, include this license,
- * provide sufficient credit to the original authors of the project (IE: larryTheCoder),
- * as well as provide a link to the original project.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
- * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,FITNESS FOR A PARTICULAR
- * PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
- * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
- * USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
+namespace SkyWars;
 
-namespace larryTheCoder;
-
-use larryTheCoder\arena\api\translation\TranslationContainer;
-use larryTheCoder\commands\SkyWarsCommand;
-use larryTheCoder\database\SkyWarsDatabase;
-use larryTheCoder\panel\FormManager;
-use larryTheCoder\utils\{fireworks\entity\FireworksRocket,
+use SkyWars\arena\api\translation\TranslationContainer;
+use SkyWars\commands\SkyWarsCommand;
+use SkyWars\database\SkyWarsDatabase;
+use SkyWars\panel\FormManager;
+use SkyWars\utils\{fireworks\entity\FireworksRocket,
 	KitManager,
 	LootGenerator,
 	npc\FakeHuman,
@@ -41,8 +14,8 @@ use larryTheCoder\utils\{fireworks\entity\FireworksRocket,
 	Settings,
 	Utils
 };
-use larryTheCoder\utils\cage\CageManager;
-use larryTheCoder\worker\LevelAsyncPool;
+use SkyWars\utils\cage\CageManager;
+use SkyWars\worker\LevelAsyncPool;
 use onebone\economyapi\EconomyAPI;
 use pocketmine\command\{Command, CommandSender};
 use pocketmine\entity\Entity;
@@ -51,12 +24,6 @@ use pocketmine\plugin\{PluginBase};
 use pocketmine\Server;
 use pocketmine\utils\{Config, MainLogger, TextFormat};
 
-/**
- * The main class for SkyWarsForPE infrastructure, originally written for Alair069.
- * However due to some futile decision, this project is open sourced again.
- *
- * @package larryTheCoder
- */
 class SkyWarsPE extends PluginBase {
 
 	private const CONFIG_VERSION = 5;
