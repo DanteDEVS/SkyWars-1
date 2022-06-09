@@ -48,7 +48,7 @@ use larryTheCoder\utils\Settings;
 use larryTheCoder\utils\Utils;
 use pocketmine\block\BlockFactory;
 use pocketmine\world\World;
-use pocketmine\level\Position;
+use pocketmine\world\Position;
 use pocketmine\player\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\Server;
