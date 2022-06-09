@@ -39,7 +39,7 @@ use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\HandlerList;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerInteractEvent;
-use pocketmine\level\Position;
+use pocketmine\world\Position;
 use pocketmine\math\Vector3;
 use pocketmine\Server;
 use pocketmine\tile\Sign;
