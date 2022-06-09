@@ -24,7 +24,7 @@ use pocketmine\plugin\{PluginBase};
 use pocketmine\Server;
 use pocketmine\utils\{Config, MainLogger, TextFormat};
 
-class SkyWarsPE extends PluginBase {
+class Main extends PluginBase {
 
 	private const CONFIG_VERSION = 5;
 	private const LOCALE_VERSION = 11;
