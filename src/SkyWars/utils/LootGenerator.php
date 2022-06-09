@@ -28,10 +28,10 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\utils;
+namespace SkyWars\utils;
 
 use InvalidArgumentException;
-use larryTheCoder\SkyWarsPE;
+use SkyWars\SkyWarsPE;
 use pocketmine\item\enchantment\Enchantment;
 use pocketmine\item\enchantment\EnchantmentInstance;
 use pocketmine\item\Item;
