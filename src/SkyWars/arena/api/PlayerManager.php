@@ -28,13 +28,13 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\api;
+namespace SkyWars\arena\api;
 
-use larryTheCoder\arena\api\impl\ArenaState;
-use larryTheCoder\arena\api\translation\TranslationContainer;
-use larryTheCoder\utils\Utils;
+use SkyWars\arena\api\impl\ArenaState;
+use SkyWars\arena\api\translation\TranslationContainer;
+use SkyWars\utils\Utils;
 use pocketmine\block\utils\ColorBlockMetaHelper;
-use pocketmine\level\Level;
+use pocketmine\world\World;
 use pocketmine\player\Player;
 use pocketmine\utils\TextFormat;
 use RuntimeException;
