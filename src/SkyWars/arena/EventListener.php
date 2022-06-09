@@ -28,17 +28,17 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena;
+namespace SkyWars\arena;
 
-use larryTheCoder\arena\api\impl\ArenaListener;
-use larryTheCoder\arena\api\impl\ArenaState;
-use larryTheCoder\arena\api\PlayerManager;
-use larryTheCoder\arena\api\translation\TranslationContainer;
-use larryTheCoder\arena\logger\CombatEntry;
-use larryTheCoder\arena\logger\CombatLogger;
-use larryTheCoder\database\SkyWarsDatabase;
-use larryTheCoder\utils\Settings;
-use larryTheCoder\utils\Utils;
+use SkyWars\arena\api\impl\ArenaListener;
+use SkyWars\arena\api\impl\ArenaState;
+use SkyWars\arena\api\PlayerManager;
+use SkyWars\arena\api\translation\TranslationContainer;
+use SkyWars\arena\logger\CombatEntry;
+use SkyWars\arena\logger\CombatLogger;
+use SkyWars\database\SkyWarsDatabase;
+use SkyWars\utils\Settings;
+use SkyWars\utils\Utils;
 use pocketmine\entity\projectile\Arrow;
 use pocketmine\event\entity\EntityDamageByChildEntityEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
