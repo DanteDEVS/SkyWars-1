@@ -30,16 +30,16 @@ declare(strict_types = 1);
 
 namespace SkyWars\arena\api;
 
-use larryTheCoder\arena\api\impl\ArenaListener;
-use larryTheCoder\arena\api\impl\ArenaState;
-use larryTheCoder\arena\api\impl\Scoreboard;
-use larryTheCoder\arena\api\impl\ShutdownSequence;
-use larryTheCoder\arena\api\task\ArenaTickTask;
-use larryTheCoder\arena\api\task\AsyncDirectoryDelete;
-use larryTheCoder\arena\api\task\CompressionAsyncTask;
-use larryTheCoder\arena\api\utils\QueueManager;
-use larryTheCoder\database\SkyWarsDatabase;
-use larryTheCoder\worker\LevelAsyncPool;
+use SkyWars\arena\api\impl\ArenaListener;
+use SkyWars\arena\api\impl\ArenaState;
+use SkyWars\arena\api\impl\Scoreboard;
+use SkyWars\arena\api\impl\ShutdownSequence;
+use SkyWars\arena\api\task\ArenaTickTask;
+use SkyWars\arena\api\task\AsyncDirectoryDelete;
+use SkyWars\arena\api\task\CompressionAsyncTask;
+use SkyWars\arena\api\utils\QueueManager;
+use SkyWars\database\SkyWarsDatabase;
+use SkyWars\worker\LevelAsyncPool;
 use pocketmine\item\Item;
 use pocketmine\item\ItemFactory;
 use pocketmine\item\ItemIds;
