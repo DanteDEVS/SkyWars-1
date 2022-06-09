@@ -26,7 +26,7 @@
  * USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-namespace larryTheCoder\utils\fireworks;
+namespace SkyWar\utils\fireworks;
 
 use pocketmine\block\Block;
 use pocketmine\entity\Entity;
@@ -34,7 +34,7 @@ use pocketmine\item\Item;
 use pocketmine\math\Vector3;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\nbt\tag\ListTag;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class Fireworks extends Item {
 
