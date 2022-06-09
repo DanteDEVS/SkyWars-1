@@ -30,7 +30,7 @@ declare(strict_types = 1);
 
 namespace SkyWars\arena\api\impl;
 
-use larryTheCoder\arena\api\Arena;
+use SkyWars\arena\api\Arena;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\entity\EntityDamageEvent;
