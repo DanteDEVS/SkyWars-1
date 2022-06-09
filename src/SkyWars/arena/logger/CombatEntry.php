@@ -28,7 +28,7 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\logger;
+namespace SkyWars\arena\logger;
 
 use pocketmine\event\entity\EntityDamageEvent;
 
