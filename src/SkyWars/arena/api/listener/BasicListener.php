@@ -28,11 +28,11 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\api\listener;
+namespace SkyWars\arena\api\listener;
 
-use larryTheCoder\arena\api\Arena;
-use larryTheCoder\arena\api\impl\ArenaState;
-use larryTheCoder\arena\ArenaImpl;
+use SkyWars\arena\api\Arena;
+use SkyWars\arena\api\impl\ArenaState;
+use SkyWars\arena\ArenaImpl;
 use pocketmine\entity\Human;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\block\BlockPlaceEvent;
@@ -51,7 +51,7 @@ use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\inventory\PlayerInventory;
 use pocketmine\math\Vector3;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 /**
  * A singleton basic listener used to listen for appropriate events to all arenas
