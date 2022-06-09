@@ -26,7 +26,7 @@
  * USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-namespace larryTheCoder\arena\api\impl;
+namespace SkyWars\arena\api\impl;
 
 
 interface ArenaState {
