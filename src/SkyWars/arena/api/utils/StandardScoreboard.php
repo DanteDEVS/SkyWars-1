@@ -28,13 +28,13 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\api\utils;
+namespace SkyWars\arena\api\utils;
 
 use pocketmine\network\mcpe\protocol\RemoveObjectivePacket;
 use pocketmine\network\mcpe\protocol\SetDisplayObjectivePacket;
 use pocketmine\network\mcpe\protocol\SetScorePacket;
 use pocketmine\network\mcpe\protocol\types\ScorePacketEntry;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\Server;
 
 class StandardScoreboard {
