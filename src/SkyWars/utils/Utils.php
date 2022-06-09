@@ -43,7 +43,7 @@ use pocketmine\{network\mcpe\protocol\AddActorPacket,
 use pocketmine\block\{Block, BlockIds};
 use pocketmine\entity\Entity;
 use pocketmine\item\{Item};
-use pocketmine\level\{Level, Location, particle\PortalParticle, Position};
+use pocketmine\world\{World, Location, particle\PortalParticle, Position};
 use pocketmine\math\Vector3;
 use pocketmine\utils\Config;
 
