@@ -26,11 +26,11 @@
  * USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-namespace larryTheCoder\utils\fireworks\entity;
+namespace SkyWars\utils\fireworks\entity;
 
-use larryTheCoder\utils\fireworks\Fireworks;
+use SkyWars\utils\fireworks\Fireworks;
 use pocketmine\entity\projectile\Projectile;
-use pocketmine\level\Level;
+use pocketmine\world\World;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\network\mcpe\protocol\ActorEventPacket;
 use pocketmine\network\mcpe\protocol\LevelSoundEventPacket;
