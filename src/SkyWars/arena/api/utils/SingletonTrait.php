@@ -46,7 +46,7 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\api\utils;
+namespace SkyWars\arena\api\utils;
 
 trait SingletonTrait{
 	/** @var self|null */
