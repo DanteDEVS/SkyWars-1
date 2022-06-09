@@ -30,7 +30,7 @@ declare(strict_types = 1);
 
 namespace SkyWars\worker;
 
-use SkyWars\SkyWarsPE;
+use SkyWars\Main;
 use pocketmine\scheduler\AsyncPool;
 use pocketmine\scheduler\ClosureTask;
 use pocketmine\scheduler\GarbageCollectionTask;
