@@ -28,12 +28,12 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\api\translation;
+namespace SkyWars\arena\api\translation;
 
-use larryTheCoder\arena\api\utils\SingletonTrait;
-use larryTheCoder\utils\Settings;
+use SkyWars\arena\api\utils\SingletonTrait;
+use SkyWars\utils\Settings;
 use pocketmine\command\CommandSender;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\Server;
 use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat;
