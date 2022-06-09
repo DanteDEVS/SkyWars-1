@@ -28,7 +28,7 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\api;
+namespace SkyWars\arena\api;
 
 use pocketmine\math\Vector3;
 use pocketmine\player\Player;
