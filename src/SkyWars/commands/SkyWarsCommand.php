@@ -27,19 +27,19 @@
  */
 
 
-namespace larryTheCoder\commands;
+namespace SkyWars\commands;
 
-use larryTheCoder\arena\api\Arena;
-use larryTheCoder\arena\api\impl\ArenaState;
-use larryTheCoder\arena\api\translation\TranslationContainer;
-use larryTheCoder\arena\ArenaImpl;
-use larryTheCoder\database\SkyWarsDatabase;
-use larryTheCoder\EventListener;
-use larryTheCoder\SkyWarsPE;
-use larryTheCoder\utils\Settings;
-use larryTheCoder\utils\Utils;
+use SkyWars\arena\api\Arena;
+use SkyWars\arena\api\impl\ArenaState;
+use SkyWars\arena\api\translation\TranslationContainer;
+use SkyWars\arena\ArenaImpl;
+use SkyWars\database\SkyWarsDatabase;
+use SkyWars\EventListener;
+use SkyWars\SkyWarsPE;
+use SkyWars\utils\Settings;
+use SkyWars\utils\Utils;
 use pocketmine\command\{Command, CommandSender};
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\Server;
 
 final class SkyWarsCommand {
