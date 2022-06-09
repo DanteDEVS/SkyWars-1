@@ -28,9 +28,9 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\worker;
+namespace SkyWars\worker;
 
-use larryTheCoder\SkyWarsPE;
+use SkyWars\SkyWarsPE;
 use pocketmine\scheduler\AsyncPool;
 use pocketmine\scheduler\ClosureTask;
 use pocketmine\scheduler\GarbageCollectionTask;
