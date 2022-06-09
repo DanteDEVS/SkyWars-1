@@ -28,18 +28,18 @@
 
 namespace larryTheCoder\utils\npc;
 
-use larryTheCoder\arena\api\translation\TranslationContainer;
-use larryTheCoder\SkyWarsPE;
+use SkyWars\arena\api\translation\TranslationContainer;
+use SkyWars\SkyWarsPE;
 use pocketmine\entity\Human;
 use pocketmine\entity\Skin;
 use pocketmine\event\entity\EntityDamageEvent;
-use pocketmine\level\Level;
-use pocketmine\level\particle\FloatingTextParticle;
+use pocketmine\world\World;
+use pocketmine\world\particle\FloatingTextParticle;
 use pocketmine\nbt\BigEndianNBTStream;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\nbt\tag\StringTag;
 use pocketmine\network\mcpe\protocol\MoveActorAbsolutePacket;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\Server;
 
 /**
