@@ -26,7 +26,7 @@
  * USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-namespace larryTheCoder\utils;
+namespace SkyWars\utils;
 
 use pocketmine\utils\Config;
 
