@@ -1,57 +1,31 @@
 <?php
-/*
- * Adapted from the Wizardry License
- *
- * Copyright (c) 2015-2020 larryTheCoder and contributors
- *
- * Permission is hereby granted to any persons and/or organizations
- * using this software to copy, modify, merge, publish, and distribute it.
- * Said persons and/or organizations are not allowed to use the software or
- * any derivatives of the work for commercial use or any other means to generate
- * income, nor are they allowed to claim this software as their own.
- *
- * The persons and/or organizations are also disallowed from sub-licensing
- * and/or trademarking this software without explicit permission from larryTheCoder.
- *
- * Any persons and/or organizations using this software must disclose their
- * source code and have it publicly available, include this license,
- * provide sufficient credit to the original authors of the project (IE: larryTheCoder),
- * as well as provide a link to the original project.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
- * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,FITNESS FOR A PARTICULAR
- * PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
- * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
- * USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\panel;
+namespace SkyWars\panel;
 
-use larryTheCoder\arena\api\task\AsyncDirectoryDelete;
-use larryTheCoder\arena\api\task\CompressionAsyncTask;
-use larryTheCoder\arena\api\translation\TranslationContainer as TC;
-use larryTheCoder\arena\ArenaImpl;
-use larryTheCoder\database\SkyWarsDatabase;
-use larryTheCoder\forms\CustomForm;
-use larryTheCoder\forms\CustomFormResponse;
-use larryTheCoder\forms\elements\Button;
-use larryTheCoder\forms\elements\Dropdown;
-use larryTheCoder\forms\elements\Image;
-use larryTheCoder\forms\elements\Input;
-use larryTheCoder\forms\elements\Label;
-use larryTheCoder\forms\elements\Slider;
-use larryTheCoder\forms\elements\Toggle;
-use larryTheCoder\forms\FormQueue;
-use larryTheCoder\forms\MenuForm;
-use larryTheCoder\forms\ModalForm;
-use larryTheCoder\SkyWarsPE;
-use larryTheCoder\utils\cage\CageManager;
-use larryTheCoder\utils\PlayerData;
-use larryTheCoder\utils\Settings;
-use larryTheCoder\worker\LevelAsyncPool;
+use SkyWars\arena\api\task\AsyncDirectoryDelete;
+use SkyWars\arena\api\task\CompressionAsyncTask;
+use SkyWars\arena\api\translation\TranslationContainer as TC;
+use SkyWars\arena\ArenaImpl;
+use SkyWars\database\SkyWarsDatabase;
+use SkyWars\forms\CustomForm;
+use SkyWars\forms\CustomFormResponse;
+use SkyWars\forms\elements\Button;
+use SkyWars\forms\elements\Dropdown;
+use SkyWars\forms\elements\Image;
+use SkyWars\forms\elements\Input;
+use SkyWars\forms\elements\Label;
+use SkyWars\forms\elements\Slider;
+use SkyWars\forms\elements\Toggle;
+use SkyWars\forms\FormQueue;
+use SkyWars\forms\MenuForm;
+use SkyWars\forms\ModalForm;
+use SkyWars\MCSkyWars;
+use SkyWars\utils\cage\CageManager;
+use SkyWars\utils\PlayerData;
+use SkyWars\utils\Settings;
+use SkyWars\worker\LevelAsyncPool;
 use pocketmine\block\Slab;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\Listener;
@@ -59,7 +33,7 @@ use pocketmine\item\Item;
 use pocketmine\item\ItemFactory;
 use pocketmine\item\ItemIds;
 use pocketmine\level\Level;
-use pocketmine\Player;
+use pocketmine\Player\Player;
 use pocketmine\Server;
 use pocketmine\utils\Config;
 
@@ -71,7 +45,7 @@ class FormManager implements Listener {
 	private const SET_NPC_COORDINATES = 3;
 	private const TELEPORT_TO_WORLD = 4;
 
-	/** @var SkyWarsPE */
+	/** @var MCSkyWars */
 	private $plugin;
 	/** @var ArenaImpl[] */
 	private $arenaSetup = [];
@@ -82,7 +56,7 @@ class FormManager implements Listener {
 	/** @var array<string, array<int|Item>> */
 	private $lastHoldIndex = [];
 
-	public function __construct(SkyWarsPE $plugin){
+	public function __construct(MCSkyWars $plugin){
 		$this->plugin = $plugin;
 
 		$plugin->getServer()->getPluginManager()->registerEvents($this, $plugin);
