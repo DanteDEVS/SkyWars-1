@@ -28,13 +28,13 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\api\scoreboard;
+namespace SkyWars\arena\api\scoreboard;
 
 use Ifera\ScoreHud\libs\jackmd\scorefactory\ScoreFactory;
 use Ifera\ScoreHud\ScoreHud;
 use Ifera\ScoreHud\utils\HelperUtils;
-use larryTheCoder\arena\api\Arena;
-use pocketmine\Player;
+use SkyWars\arena\api\Arena;
+use pocketmine\player\Player;
 use pocketmine\Server;
 use pocketmine\utils\Config;
 
