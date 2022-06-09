@@ -28,7 +28,7 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\api\impl;
+namespace SkyWars\arena\api\impl;
 
 use larryTheCoder\arena\api\Arena;
 use pocketmine\event\block\BlockBreakEvent;
@@ -43,7 +43,7 @@ use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\item\Item;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 /**
  * Arena listener class, you may want to extends this class in order to work properly.
