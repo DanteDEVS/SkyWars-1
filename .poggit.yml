@@ -5,4 +5,6 @@ branches:
 projects:
   SkyWars:
     path: ""
+    libs: 
+      - src: https://poggit.pmmp.io/ci/Infernus101/FormAPI/libFormAPI
 ...
