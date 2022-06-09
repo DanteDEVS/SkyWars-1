@@ -1,37 +1,11 @@
 <?php
-/*
- * Adapted from the Wizardry License
- *
- * Copyright (c) 2015-2020 larryTheCoder and contributors
- *
- * Permission is hereby granted to any persons and/or organizations
- * using this software to copy, modify, merge, publish, and distribute it.
- * Said persons and/or organizations are not allowed to use the software or
- * any derivatives of the work for commercial use or any other means to generate
- * income, nor are they allowed to claim this software as their own.
- *
- * The persons and/or organizations are also disallowed from sub-licensing
- * and/or trademarking this software without explicit permission from larryTheCoder.
- *
- * Any persons and/or organizations using this software must disclose their
- * source code and have it publicly available, include this license,
- * provide sufficient credit to the original authors of the project (IE: larryTheCoder),
- * as well as provide a link to the original project.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
- * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,FITNESS FOR A PARTICULAR
- * PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
- * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
- * USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 
 declare(strict_types = 1);
 
 namespace SkyWars\database;
 
 use SkyWars\arena\api\utils\SingletonTrait;
-use SkyWars\SkyWarsPE;
+use SkyWars\MCSkyWars;
 use SkyWars\utils\PlayerData;
 use SkyWars\utils\Utils;
 use pocketmine\world\Position;
@@ -67,7 +41,7 @@ class SkyWarsDatabase {
 	 * @param string[] $config
 	 */
 	public function createContext(array $config): void{
-		$this->database = libasynql::create(SkyWarsPE::getInstance(), $config, [
+		$this->database = libasynql::create(MCSkyWars::getInstance(), $config, [
 			"sqlite" => "database/sqlite.sql",
 			"mysql"  => "database/mysql.sql",
 		]);
@@ -85,7 +59,7 @@ class SkyWarsDatabase {
 		self::getInstance()->database->executeChange('data.createData', [
 			"playerName" => $player->getName(),
 		], self::$emptyStatement, static function(SqlError $result): void{
-			SkyWarsPE::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
+			MCSkyWars::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
 		});
 	}
 
@@ -107,7 +81,7 @@ class SkyWarsDatabase {
 
 			$onComplete(self::parsePlayerRow($rows[0]));
 		}, static function(SqlError $result): void{
-			SkyWarsPE::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
+			MCSkyWars::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
 		});
 	}
 
@@ -122,7 +96,7 @@ class SkyWarsDatabase {
 			'dataOffset' => implode(" ", $playerData->permissions),
 			'playerName' => $player->getName(),
 		], self::$emptyStatement, static function(SqlError $result): void{
-			SkyWarsPE::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
+			MCSkyWars::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
 		});
 	}
 
@@ -149,7 +123,7 @@ class SkyWarsDatabase {
 
 			$onComplete($data);
 		}, static function(SqlError $result) use ($onError): void{
-			SkyWarsPE::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
+			MCSkyWars::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
 
 			$onError();
 		});
@@ -164,7 +138,7 @@ class SkyWarsDatabase {
 		self::getInstance()->database->executeChange('data.addKills', [
 			"playerName" => $playerName,
 		],  self::$emptyStatement, static function(SqlError $result): void{
-			SkyWarsPE::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
+			MCSkyWars::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
 		});
 	}
 
@@ -178,7 +152,7 @@ class SkyWarsDatabase {
 		self::getInstance()->database->executeChange('data.addDeaths', [
 			"playerName" => $playerName,
 		], self::$emptyStatement, static function(SqlError $result): void{
-			SkyWarsPE::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
+			MCSkyWars::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
 		});
 	}
 
@@ -191,7 +165,7 @@ class SkyWarsDatabase {
 		self::getInstance()->database->executeChange('data.addWins', [
 			"playerName" => $playerName,
 		], self::$emptyStatement, static function(SqlError $result): void{
-			SkyWarsPE::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
+			MCSkyWars::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
 		});
 	}
 
@@ -206,7 +180,7 @@ class SkyWarsDatabase {
 			"playerName" => $playerName,
 			"playerTime" => $lastPlayed,
 		], self::$emptyStatement, static function(SqlError $result): void{
-			SkyWarsPE::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
+			MCSkyWars::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
 		});
 	}
 
@@ -220,7 +194,7 @@ class SkyWarsDatabase {
 			self::getInstance()->levelName = $position->getLevel()->getFolderName();
 			self::getInstance()->vector3 = $position->asVector3();
 		}, static function(SqlError $result): void{
-			SkyWarsPE::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
+			MCSkyWars::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
 		});
 	}
 
@@ -252,7 +226,7 @@ class SkyWarsDatabase {
 				self::getInstance()->levelName = $level->getFolderName();
 			}
 		}, static function(SqlError $result): void{
-			SkyWarsPE::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
+			MCSkyWars::getInstance()->getLogger()->emergency($result->getQuery() . ' - ' . $result->getErrorMessage());
 		});
 	}
 
