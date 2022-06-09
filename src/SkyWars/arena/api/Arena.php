@@ -28,7 +28,7 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\api;
+namespace SkyWars\arena\api;
 
 use larryTheCoder\arena\api\impl\ArenaListener;
 use larryTheCoder\arena\api\impl\ArenaState;
@@ -43,8 +43,8 @@ use larryTheCoder\worker\LevelAsyncPool;
 use pocketmine\item\Item;
 use pocketmine\item\ItemFactory;
 use pocketmine\item\ItemIds;
-use pocketmine\level\Level;
-use pocketmine\level\Position;
+use pocketmine\world\World;
+use pocketmine\world\Position;
 use pocketmine\network\mcpe\protocol\AdventureSettingsPacket;
 use pocketmine\network\mcpe\protocol\types\PlayerPermissions;
 use pocketmine\player\Player;
