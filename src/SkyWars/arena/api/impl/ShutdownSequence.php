@@ -28,7 +28,7 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\api\impl;
+namespace SkyWars\arena\api\impl;
 
 interface ShutdownSequence {
 
