@@ -26,13 +26,13 @@
  * USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-namespace larryTheCoder\arena;
+namespace SkyWars\arena;
 
 
 use larryTheCoder\arena\api\Arena;
 use larryTheCoder\arena\api\impl\ArenaState;
 use larryTheCoder\utils\Utils;
-use pocketmine\level\Position;
+use pocketmine\world\Position;
 use pocketmine\math\Vector3;
 use pocketmine\Server;
 
