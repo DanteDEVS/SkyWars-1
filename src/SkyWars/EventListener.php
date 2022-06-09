@@ -29,7 +29,7 @@ class EventListener extends BasicListener implements Listener {
 	/** @var int */
 	private static $nextPlayer = 0;
 
-	/** @var SkyWarsPE */
+	/** @var MCSkyWars */
 	private $plugin;
 
 	public function __construct(SkyWarsPE $plugin){
