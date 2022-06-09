@@ -35,7 +35,7 @@ use larryTheCoder\arena\api\translation\TranslationContainer;
 use larryTheCoder\utils\Utils;
 use pocketmine\block\utils\ColorBlockMetaHelper;
 use pocketmine\level\Level;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\utils\TextFormat;
 use RuntimeException;
 
