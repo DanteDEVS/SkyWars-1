@@ -28,15 +28,15 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\database;
+namespace SkyWars\database;
 
-use larryTheCoder\arena\api\utils\SingletonTrait;
-use larryTheCoder\SkyWarsPE;
-use larryTheCoder\utils\PlayerData;
-use larryTheCoder\utils\Utils;
-use pocketmine\level\Position;
+use SkyWars\arena\api\utils\SingletonTrait;
+use SkyWars\SkyWarsPE;
+use SkyWars\utils\PlayerData;
+use SkyWars\utils\Utils;
+use pocketmine\world\Position;
 use pocketmine\math\Vector3;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\Server;
 use pocketmine\utils\TextFormat;
 use poggit\libasynql\DataConnector;
