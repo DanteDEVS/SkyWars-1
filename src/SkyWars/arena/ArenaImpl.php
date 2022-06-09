@@ -49,7 +49,7 @@ use larryTheCoder\utils\Utils;
 use pocketmine\block\BlockFactory;
 use pocketmine\level\Level;
 use pocketmine\level\Position;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\Server;
 use pocketmine\tile\Chest;
