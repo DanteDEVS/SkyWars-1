@@ -29,9 +29,9 @@
 namespace SkyWars\arena;
 
 
-use larryTheCoder\arena\api\Arena;
-use larryTheCoder\arena\api\impl\ArenaState;
-use larryTheCoder\utils\Utils;
+use SkyWars\arena\api\Arena;
+use SkyWars\arena\api\impl\ArenaState;
+use SkyWars\utils\Utils;
 use pocketmine\world\Position;
 use pocketmine\math\Vector3;
 use pocketmine\Server;
