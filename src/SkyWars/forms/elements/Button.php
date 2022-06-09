@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-namespace larryTheCoder\forms\elements;
+namespace SkyWars\forms\elements;
 
 class Button extends Element {
 	/** @var Image|null */
