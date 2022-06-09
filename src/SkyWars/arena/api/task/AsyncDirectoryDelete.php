@@ -28,9 +28,9 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\api\task;
+namespace SkyWars\arena\api\task;
 
-use pocketmine\level\Level;
+use pocketmine\world\World;
 use pocketmine\scheduler\AsyncTask;
 use pocketmine\Server;
 
