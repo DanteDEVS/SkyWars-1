@@ -28,11 +28,11 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\api;
+namespace SkyWars\arena\api;
 
-use larryTheCoder\arena\api\impl\ArenaState;
-use larryTheCoder\arena\api\impl\ShutdownSequence;
-use larryTheCoder\arena\api\translation\TranslationContainer;
+use SkyWars\arena\api\impl\ArenaState;
+use SkyWars\arena\api\impl\ShutdownSequence;
+use SkyWars\arena\api\translation\TranslationContainer;
 use pocketmine\block\BlockIds;
 use pocketmine\block\StainedGlass;
 use pocketmine\event\block\BlockBreakEvent;
