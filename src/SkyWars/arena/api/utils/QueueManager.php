@@ -28,10 +28,10 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\api\utils;
+namespace SkyWars\arena\api\utils;
 
 
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class QueueManager {
 
