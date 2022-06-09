@@ -24,13 +24,13 @@ use pocketmine\plugin\{PluginBase};
 use pocketmine\Server;
 use pocketmine\utils\{Config, MainLogger, TextFormat};
 
-class SkyWarsPE extends PluginBase {
+class MCSkyWars extends PluginBase {
 
 	private const CONFIG_VERSION = 5;
 	private const LOCALE_VERSION = 11;
 	private const CAGES_VERSION = 2;
 
-	/** @var SkyWarsPE|null */
+	/** @var MCSkyWars|null */
 	private static $instance;
 
 	/** @var SkyWarsCommand */
@@ -74,7 +74,7 @@ class SkyWarsPE extends PluginBase {
 
 		// Load config file first.
 		$cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML);
-		if($cfg->get("config-version") !== SkyWarsPE::CONFIG_VERSION){
+		if($cfg->get("config-version") !== MCSkyWars::CONFIG_VERSION){
 			Server::getInstance()->getLogger()->info(Settings::$prefix . TextFormat::YELLOW . "Your config is outdated. saving a newer config file.");
 
 			Utils::oldRenameRecursive();
@@ -86,7 +86,7 @@ class SkyWarsPE extends PluginBase {
 
 		// Then load cages file.
 		$cfg = new Config($this->getDataFolder() . "cages.yml", Config::YAML);
-		if($cfg->get('version-id') < SkyWarsPE::CAGES_VERSION){
+		if($cfg->get('version-id') < MCSkyWars::CAGES_VERSION){
 			Server::getInstance()->getLogger()->info(Settings::$prefix . TextFormat::YELLOW . "Your cages config is outdated. saving a newer cages config.");
 
 			Utils::oldRenameRecursive("cages.yml");
@@ -203,7 +203,7 @@ class SkyWarsPE extends PluginBase {
 		}
 	}
 
-	public static function getInstance(): ?SkyWarsPE{
+	public static function getInstance(): ?MCSkyWars{
 		return self::$instance;
 	}
 
