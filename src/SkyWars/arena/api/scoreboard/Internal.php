@@ -28,14 +28,14 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\api\scoreboard;
+namespace SkyWars\arena\api\scoreboard;
 
-use larryTheCoder\arena\api\Arena;
-use larryTheCoder\arena\api\impl\ArenaState;
-use larryTheCoder\arena\api\impl\Scoreboard;
-use larryTheCoder\arena\api\utils\StandardScoreboard;
-use larryTheCoder\utils\Utils;
-use pocketmine\Player;
+use SkyWars\arena\api\Arena;
+use SkyWars\arena\api\impl\ArenaState;
+use SkyWars\arena\api\impl\Scoreboard;
+use SkyWars\arena\api\utils\StandardScoreboard;
+use SkyWars\utils\Utils;
+use pocketmine\player\Player;
 use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat;
 
