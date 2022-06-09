@@ -31,7 +31,7 @@ declare(strict_types = 1);
 namespace larryTheCoder\arena\api\impl;
 
 
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 interface Scoreboard {
 
