@@ -8,7 +8,7 @@ use SkyWars\arena\ArenaImpl;
 use SkyWars\utils\ConfigManager;
 use SkyWars\utils\Utils;
 use SkyWars\worker\LevelAsyncPool;
-use pocketmine\Player\Player;
+use pocketmine\player\Player;
 use pocketmine\utils\Config;
 
 final class ArenaManager {
