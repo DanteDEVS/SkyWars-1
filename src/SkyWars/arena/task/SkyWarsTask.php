@@ -28,13 +28,13 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\task;
+namespace SkyWars\arena\task;
 
-use larryTheCoder\arena\api\Arena;
-use larryTheCoder\arena\api\task\ArenaTickTask;
-use larryTheCoder\arena\ArenaImpl;
-use larryTheCoder\database\SkyWarsDatabase;
-use larryTheCoder\utils\Utils;
+use SkyWars\arena\api\Arena;
+use SkyWars\arena\api\task\ArenaTickTask;
+use SkyWars\arena\ArenaImpl;
+use SkyWars\database\SkyWarsDatabase;
+use SkyWars\utils\Utils;
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\Server;
 use pocketmine\utils\TextFormat;
