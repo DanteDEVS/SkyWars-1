@@ -28,17 +28,17 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\utils\permission;
+namespace SkyWars\utils\permission;
 
-use larryTheCoder\arena\api\utils\SingletonTrait;
-use larryTheCoder\database\SkyWarsDatabase;
-use larryTheCoder\SkyWarsPE;
-use larryTheCoder\utils\PlayerData;
+use SkyWars\arena\api\utils\SingletonTrait;
+use SkyWars\database\SkyWarsDatabase;
+use SkyWars\SkyWarsPE;
+use SkyWars\utils\PlayerData;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\permission\PermissionAttachment;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\utils\AssumptionFailedError;
 
 class PluginPermission implements Listener {
