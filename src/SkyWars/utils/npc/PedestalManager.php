@@ -28,18 +28,18 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\utils\npc;
+namespace SkyWars\utils\npc;
 
-use larryTheCoder\database\SkyWarsDatabase;
-use larryTheCoder\SkyWarsPE;
-use larryTheCoder\utils\PlayerData;
+use SkyWars\database\SkyWarsDatabase;
+use SkyWars\SkyWarsPE;
+use SkyWars\utils\PlayerData;
 use pocketmine\entity\Entity;
 use pocketmine\event\entity\EntityLevelChangeEvent;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\level\Level;
+use pocketmine\world\World;
 use pocketmine\math\Vector3;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\scheduler\Task;
 use poggit\libasynql\SqlError;
 
