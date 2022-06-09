@@ -26,10 +26,10 @@
  * USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-namespace larryTheCoder\utils\cage;
+namespace SkyWars\utils\cage;
 
 use pocketmine\block\Block;
-use pocketmine\level\Position;
+use pocketmine\world\Position;
 
 /**
  * The main cage class that is responsible in handling player's
