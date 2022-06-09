@@ -13,7 +13,7 @@ use pocketmine\utils\Config;
 
 final class ArenaManager {
 
-	/** @var SkyWarsPE */
+	/** @var MCSkyWars */
 	private $plugin;
 
 	/** @var ArenaImpl[] */
@@ -22,7 +22,7 @@ final class ArenaManager {
 	private $config;
 
 	public function __construct(){
-		$this->plugin = SkyWarsPE::getInstance();
+		$this->plugin = MCSkyWars::getInstance();
 	}
 
 	public function checkArenas(): void{
