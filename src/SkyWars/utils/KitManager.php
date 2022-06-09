@@ -28,19 +28,19 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\utils;
+namespace SkyWars1\utils;
 
 use AndreasHGK\EasyKits\Kit;
 use AndreasHGK\EasyKits\manager\KitManager as EasyKit;
 use AndreasHGK\EasyKits\utils\LangUtils;
-use larryTheCoder\arena\api\translation\TranslationContainer as TC;
-use larryTheCoder\forms\elements\Button;
-use larryTheCoder\forms\FormQueue;
-use larryTheCoder\forms\MenuForm;
+use SkyWars\arena\api\translation\TranslationContainer as TC;
+use SkyWars\forms\elements\Button;
+use SkyWars\forms\FormQueue;
+use SkyWars\forms\MenuForm;
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\event\Listener;
 use pocketmine\item\Item;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\Server;
 use pocketmine\utils\TextFormat;
 
