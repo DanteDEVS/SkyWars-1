@@ -26,7 +26,7 @@
  * USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-namespace larryTheCoder\arena\api\task;
+namespace SkyWars\arena\api\task;
 
 use pocketmine\scheduler\AsyncTask;
 use pocketmine\Server;
