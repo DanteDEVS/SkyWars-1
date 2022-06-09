@@ -1,35 +1,9 @@
 <?php
-/**
- * Adapted from the Wizardry License
- *
- * Copyright (c) 2015-2018 larryTheCoder and contributors
- *
- * Permission is hereby granted to any persons and/or organizations
- * using this software to copy, modify, merge, publish, and distribute it.
- * Said persons and/or organizations are not allowed to use the software or
- * any derivatives of the work for commercial use or any other means to generate
- * income, nor are they allowed to claim this software as their own.
- *
- * The persons and/or organizations are also disallowed from sub-licensing
- * and/or trademarking this software without explicit permission from larryTheCoder.
- *
- * Any persons and/or organizations using this software must disclose their
- * source code and have it publicly available, include this license,
- * provide sufficient credit to the original authors of the project (IE: larryTheCoder),
- * as well as provide a link to the original project.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
- * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,FITNESS FOR A PARTICULAR
- * PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
- * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
- * USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
 
-namespace larryTheCoder\utils;
+namespace SkyWars\utils;
 
 use SkyWars\arena\ArenaImpl;
-use SkyWars\SkyWarsPE;
+use SkyWars\MCSkyWars;
 use SkyWars\utils\fireworks\entity\FireworksRocket;
 use SkyWars\utils\fireworks\Fireworks;
 use pocketmine\{network\mcpe\protocol\AddActorPacket,
@@ -48,7 +22,7 @@ use pocketmine\math\Vector3;
 use pocketmine\utils\Config;
 
 /**
- * @package larryTheCoder\utils
+ * @package SkyWars\utils
  */
 class Utils {
 
@@ -58,7 +32,7 @@ class Utils {
 	public static $helixMathMap = [];
 
 	public static function oldRenameRecursive(string $file = "config.yml"): void{
-		$dataFolder = SkyWarsPE::getInstance()->getDataFolder();
+		$dataFolder = MCSkyWars::getInstance()->getDataFolder();
 
 		if(file_exists($dataFolder . $file . ".old")) self::oldRenameRecursive($file . ".old");
 		rename($dataFolder . $file, $dataFolder . $file . ".old");
@@ -172,11 +146,11 @@ class Utils {
 	}
 
 	public static function unloadGame(): void{
-		foreach(SkyWarsPE::getInstance()->getArenaManager()->getArenas() as $name => $arena){
+		foreach(MCSkyWars::getInstance()->getArenaManager()->getArenas() as $name => $arena){
 			$arena->shutdown();
 		}
 
-		SkyWarsPE::getInstance()->getArenaManager()->invalidate();
+		MCSkyWars::getInstance()->getArenaManager()->invalidate();
 	}
 
 	public static function loadFirst(string $levelName, bool $load = true): void{
@@ -187,8 +161,8 @@ class Utils {
 	}
 
 	public static function ensureDirectory(string $directory = ""): void{
-		if(!file_exists(SkyWarsPE::getInstance()->getDataFolder() . $directory)){
-			@mkdir(SkyWarsPE::getInstance()->getDataFolder() . $directory, 0755);
+		if(!file_exists(MCSkyWars::getInstance()->getDataFolder() . $directory)){
+			@mkdir(MCSkyWars::getInstance()->getDataFolder() . $directory, 0755);
 		}
 	}
 
@@ -306,10 +280,10 @@ class Utils {
 	}
 
 	public static function getScoreboardConfig(ArenaImpl $arena): Config{
-		$path = SkyWarsPE::getInstance()->getDataFolder() . "scoreboards/{$arena->getMapName()}.yml";
+		$path = MCSkyWars::getInstance()->getDataFolder() . "scoreboards/{$arena->getMapName()}.yml";
 
 		if(!is_file($path)){
-			file_put_contents($path, $resource = SkyWarsPE::getInstance()->getResource("scoreboard.yml"));
+			file_put_contents($path, $resource = MCSkyWars::getInstance()->getResource("scoreboard.yml"));
 			fclose($resource);
 		}
 
@@ -317,7 +291,7 @@ class Utils {
 		if($scoreboard->get("version", 3) < 3){
 			rename($path, $path . ".old");
 
-			file_put_contents($path, $resource = SkyWarsPE::getInstance()->getResource("scoreboard.yml"));
+			file_put_contents($path, $resource = MCSkyWars::getInstance()->getResource("scoreboard.yml"));
 			fclose($resource);
 
 			$scoreboard->reload();
