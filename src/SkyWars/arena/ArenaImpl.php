@@ -29,7 +29,7 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena;
+namespace SkyWars\arena;
 
 use larryTheCoder\arena\api\Arena;
 use larryTheCoder\arena\api\CageManager;
@@ -40,14 +40,14 @@ use larryTheCoder\arena\api\SignManager;
 use larryTheCoder\arena\api\task\ArenaTickTask;
 use larryTheCoder\arena\task\SkyWarsTask;
 use larryTheCoder\database\SkyWarsDatabase;
-use larryTheCoder\SkyWarsPE;
+use SkyWars\SkyWarsPE;
 use larryTheCoder\utils\cage\CageManager as CageHandler;
 use larryTheCoder\utils\ConfigManager;
 use larryTheCoder\utils\LootGenerator;
 use larryTheCoder\utils\Settings;
 use larryTheCoder\utils\Utils;
 use pocketmine\block\BlockFactory;
-use pocketmine\level\Level;
+use pocketmine\world\World;
 use pocketmine\level\Position;
 use pocketmine\player\Player;
 use pocketmine\plugin\Plugin;
