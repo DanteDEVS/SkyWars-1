@@ -26,9 +26,9 @@
  * USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-namespace larryTheCoder\utils;
+namespace SkyWars\utils;
 
-use larryTheCoder\arena\api\SignManager;
+use SkyWars\arena\api\SignManager;
 use pocketmine\Server;
 use pocketmine\utils\Config;
 
