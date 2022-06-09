@@ -28,13 +28,13 @@
 
 declare(strict_types = 1);
 
-namespace larryTheCoder\arena\api\task;
+namespace SkyWars\arena\api\task;
 
 
-use larryTheCoder\arena\api\Arena;
-use larryTheCoder\arena\api\impl\ArenaState;
-use larryTheCoder\arena\api\impl\ShutdownSequence;
-use larryTheCoder\utils\Utils;
+use SkyWars\arena\api\Arena;
+use SkyWars\arena\api\impl\ArenaState;
+use SkyWars\arena\api\impl\ShutdownSequence;
+use SkyWars\utils\Utils;
 use pocketmine\scheduler\Task;
 use pocketmine\utils\MainLogger;
 use pocketmine\utils\TextFormat;
