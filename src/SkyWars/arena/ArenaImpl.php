@@ -164,10 +164,10 @@ class ArenaImpl extends ArenaData {
 		// Cage factory reset.
 		// It is quite impossible for this to return an unloaded object since the
 		// arena world is already loaded and the match has started.
-		if($this->getLevel() !== null && !$this->getLevel()->isClosed()){
+		if($this->getWorld() !== null && !$this->getWorld()->isClosed()){
 			foreach($this->toRemove as $data){
 				foreach($data as $pos){
-					$this->getLevel()->setBlock($pos, BlockFactory::get(0));
+					$this->getWorld()->setBlock($pos, BlockFactory::get(0));
 				}
 			}
 		}
