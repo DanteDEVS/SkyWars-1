@@ -27,7 +27,7 @@
  */
 
 
-namespace larryTheCoder\utils;
+namespace SkyWars\utils;
 
 class PlayerData {
 
