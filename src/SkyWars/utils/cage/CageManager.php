@@ -26,16 +26,17 @@
  * USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-namespace larryTheCoder\utils\cage;
+namespace SkyWars\utils\cage;
 
-use larryTheCoder\arena\api\translation\TranslationContainer;
-use larryTheCoder\database\SkyWarsDatabase;
-use larryTheCoder\SkyWarsPE;
-use larryTheCoder\utils\permission\PluginPermission;
-use larryTheCoder\utils\PlayerData;
-use larryTheCoder\utils\Utils;
+use SkyWars\arena\api\translation\TranslationContainer;
+use SkyWars\database\SkyWarsDatabase;
+use SkyWars\SkyWarsPE;
+use SkyWars\utils\permission\PluginPermission;
+use SkyWars\utils\PlayerData;
+use SkyWars\utils\Utils;
 use onebone\economyapi\EconomyAPI;
-use pocketmine\{block\BlockFactory, Player, utils\Config};
+use pocketmine\{block\BlockFactory, utils\Config};
+Use pocketmine\player\Player;
 
 class CageManager {
 
