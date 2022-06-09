@@ -28,10 +28,10 @@
 
 namespace larryTheCoder\utils;
 
-use larryTheCoder\arena\ArenaImpl;
-use larryTheCoder\SkyWarsPE;
-use larryTheCoder\utils\fireworks\entity\FireworksRocket;
-use larryTheCoder\utils\fireworks\Fireworks;
+use SkyWars\arena\ArenaImpl;
+use SkyWars\SkyWarsPE;
+use SkyWars\utils\fireworks\entity\FireworksRocket;
+use SkyWars\utils\fireworks\Fireworks;
 use pocketmine\{network\mcpe\protocol\AddActorPacket,
 	network\mcpe\protocol\PlaySoundPacket,
 	Player,
