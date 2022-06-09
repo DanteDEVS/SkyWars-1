@@ -26,7 +26,7 @@
  * USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-namespace larryTheCoder\utils\npc;
+namespace SkyWars\utils\npc;
 
 use SkyWars\arena\api\translation\TranslationContainer;
 use SkyWars\SkyWarsPE;
